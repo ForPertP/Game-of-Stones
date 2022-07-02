@@ -12,8 +12,11 @@ string rtrim(const string &);
  * The function accepts INTEGER n as parameter.
  */
 
-string gameOfStones(int n) {
-
+string gameOfStones(int n)
+{
+    std::string result {"First"};
+    
+    return result;
 }
 
 int main()
