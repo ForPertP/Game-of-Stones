@@ -16,6 +16,11 @@ string gameOfStones(int n)
 {
     std::string result {"First"};
     
+    if (n % 7 < 2)
+    {
+        result = "Second";
+    }
+    
     return result;
 }
 
