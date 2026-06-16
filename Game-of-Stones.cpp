@@ -24,6 +24,10 @@ string gameOfStones(int n)
     return result;
 }
 
+string gameOfStones2(int n)
+{
+}
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
