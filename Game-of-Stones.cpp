@@ -12,7 +12,22 @@ string rtrim(const string &);
  * The function accepts INTEGER n as parameter.
  */
 
-string gameOfStones(int n)
+string gameOfStones(int n) {
+    vector<bool> dp(n + 1, false);
+    
+    for (int i = 2; i <= n; i++) {
+        if ((i >= 2 && !dp[i - 2]) || 
+            (i >= 3 && !dp[i - 3]) || 
+            (i >= 5 && !dp[i - 5])) {
+            dp[i] = true;
+        }
+    }
+    
+    return dp[n] ? "First" : "Second";    
+}
+
+
+string gameOfStones2(int n)
 {
     string result {"First"};
     
@@ -24,9 +39,6 @@ string gameOfStones(int n)
     return result;
 }
 
-string gameOfStones2(int n)
-{
-}
 
 int main()
 {
