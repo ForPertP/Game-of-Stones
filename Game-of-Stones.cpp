@@ -14,7 +14,7 @@ string rtrim(const string &);
 
 string gameOfStones(int n)
 {
-    std::string result {"First"};
+    string result {"First"};
     
     if (n % 7 < 2)
     {
