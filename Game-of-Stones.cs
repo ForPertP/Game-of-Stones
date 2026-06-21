@@ -22,7 +22,22 @@ class Result
      * The function accepts INTEGER n as parameter.
      */
 
-}
+    public static string gameOfStones(int n)
+    {
+        bool[] dp = new bool[n + 1];
+
+        for (int i = 2; i <= n; i++)
+        {
+            if ((i >= 2 && !dp[i - 2]) ||
+                (i >= 3 && !dp[i - 3]) ||
+                (i >= 5 && !dp[i - 5]))
+            {
+                dp[i] = true;
+            }
+        }
+
+        return dp[n] ? "First" : "Second";
+    }
 
 class Solution
 {
