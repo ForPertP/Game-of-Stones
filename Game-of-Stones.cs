@@ -38,6 +38,8 @@ class Result
 
         return dp[n] ? "First" : "Second";
     }
+}
+
 
 class Solution
 {
