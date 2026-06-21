@@ -38,6 +38,11 @@ class Result
 
         return dp[n] ? "First" : "Second";
     }
+
+
+    public static string gameOfStones2(int n)
+    {
+    }    
 }
 
 
