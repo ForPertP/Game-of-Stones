@@ -56,7 +56,24 @@ class Result
 
         return dp[n] ? "First" : "Second";
     }
-    
+
+
+    public static string gameOfStones3(int n)
+    {
+        List<bool> dp = Enumerable.Repeat(false, n + 1).ToList();
+
+        for (int i = 2; i <= n; i++)
+        {
+            if ((i >= 2 && !dp[i - 2]) ||
+                (i >= 3 && !dp[i - 3]) ||
+                (i >= 5 && !dp[i - 5]))
+            {
+                dp[i] = true;
+            }
+        }
+
+        return dp[n] ? "First" : "Second";
+    }    
 }
 
 
