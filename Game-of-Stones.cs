@@ -39,7 +39,7 @@ class Result
         return dp[n] ? "First" : "Second";
     }
 
-
+    
     public static string gameOfStones2(int n)
     {
         List<bool> dp = new List<bool>(new bool[n + 1]);
@@ -73,9 +73,15 @@ class Result
         }
 
         return dp[n] ? "First" : "Second";
-    }    
-}
+    }
 
+
+    public static string gameOfStones4(int n)
+    {
+        return (n % 7 < 2) ? "Second" : "First";
+    }
+
+}
 
 class Solution
 {
