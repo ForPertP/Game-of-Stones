@@ -9,7 +9,13 @@
 -- The function accepts INTEGER n as parameter.
 --
 
-
+function gameOfStones2(n)
+    if n % 7 < 2 then
+        return "Second"
+    else
+        return "First"
+    end
+end
 
 
 local fptr = io.open(os.getenv("OUTPUT_PATH"), "w")
